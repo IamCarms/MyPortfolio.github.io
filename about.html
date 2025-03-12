@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="website icon" type = "png" href="images/profile.png">
+    <link rel="stylesheet" href="style/about.css">
+</head>
+    <nav class="navbar"> 
+    <a href="index.html" class="logo">Portfolio.</a>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="about.html">About</a></li>
+        <li><a href="Portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+<body>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/aboutimg.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub">Hi.</h1>
+                    <p> I’m Ian Carmelo Dichoso: UI/UX Designer, a gym rat and amateur cook, tinkerer, and general curious person.  <br>     <br>I can create fully functional websites and apps out of thin air, sculpting them from the fundamental elements of the web: HTML, CSS, JavaScript. On a nice day, I launch them for the world to see. Otherwise, I keep them as trinkets in my box of projects as reminders of my continuing self-development.</p>
+                    <div class="tab-title"> 
+                        <p class="tab-links active-link" onclick="opentab('Skills')">SKILLS</p>
+                        <p class="tab-links" onclick="opentab('Experience')">EXPERRIENCE</p>
+                        <p class="tab-links" onclick="opentab('Education')">EDUCATION</p>
+                    </div>
+                    <!-- Skills -->
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Design Web/App Iterfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>Python</span><br>Entry-Level Python Developer</li>
+                            <li><span>Microsoft</span><br>Proficient in MS application</li>
+                        </ul>
+                    </div>
+                    <!-- Experience -->
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>Work Immersion 2024</span><br>Laguna Auto-parts Manufacturing Corporation</li>
+                            <li><span>Work Immersion 2020</span><br>IT Assisstant/Maitenance </li>
+                        </ul>
+                    </div>
+                    <!-- Education -->
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2020-2024</span><br>Technological University of the Philippines <br>Bachelor of Engineering Technology Major in Computer Engineering Technology.</li>
+                            <li><span>2018-2020</span><br>SHS - Lopez National Comprehensive High School <br>Information and Communication Technology.</li>
+                            <li><span>2014-2018</span><br>JHS - Lopez National Comprehensive High School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Services -->
+<div id="services">
+    <div class="container">
+         <h1 class="sub-title">Services</h1>
+         <div class="services-list">
+            <div>
+                <i class='bx bx-code-alt'></i>
+                <h2>Web Design</h2>
+                <p>HTML, CSS and JavaScript to make your website come to life.</p>
+            </div>
+            <div>
+                <i class='bx bx-crop'></i>
+                <h2>UI/UX Design</h2>
+                <p>Wireframes, mockups, and prototypes all for your digital interface. </p>
+            </div>
+            <div>
+                <i class='bx bxl-python'></i>
+                <h2>Entry-Level Python Developer</h2>
+                <p>Clean, efficient Python code to implement feature and functionalities in your project. All under the coding standards but with the best practices. </p>
+            </div>
+         </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>

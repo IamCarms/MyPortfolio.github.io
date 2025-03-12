@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "montserrat", "sans-serif";
+}
+body {
+    background-color: #1f242d;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 10px 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: #1f242d;
+}
+.navbar .logo {
+    font-size: 30px;
+    font-weight: 700;
+}
+.navbar ul {
+    display: flex;
+}
+.navbar ul li {
+    list-style: none;
+    margin-left: 35px;
+}
+.navbar ul li a{
+    font-size: 20px;
+    font-weight: 500;
+    transition: .5s;
+}
+.navbar ul li:hover a,
+.navbar ul li.active a{
+    color: #7cf03d;
+}
+/* about contents */
+#about {
+    margin-top: auto;
+    padding: 60px 0;
+    color: #ababab;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    padding-left: 25px;
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 110%;
+    border-radius: 20px;
+    mix-blend-mode: lighten;
+}
+.about-col-2{
+    flex-basis: 60%;
+    padding-right: 25px; 
+    text-align: justify;
+    text-justify: inter-word;
+}
+.sub {
+    padding-top: 10px;
+    font-size: 40px;
+    
+    color: white;
+}
+.tab-title {
+    padding-top: 20px;
+    font-weight: 900;
+    display: flex;
+    margin: 10px 0 40px;
+    font-weight: bold;
+}
+.tab-title p{
+    font-weight: bold;
+
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #7cf03d;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: .5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #7cf03d;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/* services */
+#services{
+    padding: 10px 50px;
+    color: #fff;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #342f2f;
+    padding: 40px;
+    font-size: 13px;
+    border-radius: 10px;
+    transition: background 1s, trasnform 1s;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div .py{
+    margin-top: 20px;
+}
+.services-list div:hover{
+    background: #4e8630;
+    transform: translateY(-10px);
+}
+.services-list div p{
+    font-size: 15px;
+}

@@ -4,8 +4,9 @@
     box-sizing: border-box;
     font-family: "montserrat", "sans-serif";
 }
-body {
+body *{
     background-color: #1f242d;
+    transition: 0.3;
 }
 a {
     color: #fff;

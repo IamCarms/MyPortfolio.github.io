@@ -6,6 +6,10 @@
 }
 body {
     background-color: #1f242d;
+    
+}
+body {
+    transition: 0.3s;
 }
 a {
     color: #fff;
